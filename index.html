@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Toastr CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="gameContainer">
+    <h1>Tic Tac Toe</h1>
+
+    <!-- Custom Player Names -->
+    <div id="playerNames">
+      <div class="name-option">
+        <input type="checkbox" id="customNames" />
+        <label for="customNames">Use custom names?</label>
+      </div>
+      
+      <div class="name-option">
+        <label for="player1">Player 1 Name:</label>
+        <input type="text" id="player1" placeholder="Enter Player 1's name" />
+      </div>
+    
+      <div class="name-option">
+        <label for="player2">Player 2 Name:</label>
+        <input type="text" id="player2" placeholder="Enter Player 2's name" />
+      </div>
+    </div>
+    
+
+    <button id="startBtn">Start Game</button>
+    
+    <div id="cellContainer">
+      <div cellIndex="0" class="cell"></div>
+      <div cellIndex="1" class="cell"></div>
+      <div cellIndex="2" class="cell"></div>
+      <div cellIndex="3" class="cell"></div>
+      <div cellIndex="4" class="cell"></div>
+      <div cellIndex="5" class="cell"></div>
+      <div cellIndex="6" class="cell"></div>
+      <div cellIndex="7" class="cell"></div>
+      <div cellIndex="8" class="cell"></div>
+    </div>
+
+    <h2 id="statusText"></h2>
+    <button id="restartBtn" style="display:none;">Restart</button>
+  </div>
+
+  <!-- Toastr JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

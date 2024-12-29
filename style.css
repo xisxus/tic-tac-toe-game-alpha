@@ -1,0 +1,258 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+/* Player name section */
+#playerNames {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Group the checkbox and name input fields into horizontal rows */
+.name-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Space between each row */
+  justify-content: center;
+  gap: 10px; /* Space between label and input */
+}
+
+.name-option input[type="text"], .name-option input[type="checkbox"] {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.name-option input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #4c8fdd;
+  box-shadow: 0 0 8px rgba(76, 143, 221, 0.5);
+}
+
+.name-option label {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Ensure that the layout adjusts on smaller screens */
+@media (max-width: 480px) {
+  #playerNames {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .name-option {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .name-option label {
+    margin-bottom: 5px; /* Adjust spacing when stacked */
+  }
+}
+
+
+
+
+
+/* Game container */
+#gameContainer {
+  text-align: center;
+  background: linear-gradient(145deg, #6e7dff, #6577e7);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  height: 800px;
+}
+
+/* Title */
+h1 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Player name input section */
+#playerNames {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+input[type="text"] {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 22px);
+  transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #4c8fdd;
+  box-shadow: 0 0 8px rgba(76, 143, 221, 0.5);
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Start button */
+button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff3385;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #ff1e6a;
+}
+
+/* Cell container */
+/* #cellContainer {
+
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+} */
+
+#cellContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 0px;
+  justify-content: start;
+  padding: 40px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+
+.cell-clicked {
+  background-color: #e0e0e0;
+}
+
+.winning-cell {
+  background-color: #ff6666; /* Red for winning cells */
+  transform: scale(1.1);
+}
+
+#statusText {
+  margin-top: 0px;
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: bold;
+}
+
+#restartBtn {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#restartBtn:hover {
+  background-color: #218838;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+#playerNames input[type="checkbox"] {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  #gameContainer {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  #statusText {
+    font-size: 1rem;
+  }
+}
