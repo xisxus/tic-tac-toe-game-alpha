@@ -215,13 +215,13 @@ button:active {
 
 .custom-alert {
   position: fixed;
-  top: 50%;
+  top: 64%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #28a745;
   color: white;
-  padding: 20px;
-  font-size: 20px;
+  padding: 24px;
+  font-size: 21px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   z-index: 999;
